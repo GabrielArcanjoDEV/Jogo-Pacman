@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacman</title>
+    <style>
+        body {
+            background-color: black;
+            color: #FFFF00; /* Amarelo Pac-Man */
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .stats {
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Container para garantir que o canvas e o texto fiquem alinhados */
+        .game-area {
+            position: relative;
+            display: inline-block;
+        }
+
+        canvas {
+            border: 2px solid #0000FF; /* Borda Azul conforme a imagem */
+            background-color: black;
+            display: block;
+        }
+
+        /* A mensagem "Clique em Iniciar" agora é controlada pelo JS dentro do Canvas, 
+           mas este ID ajuda o JS a encontrá-lo se necessário */
+        #message {
+            color: #FFFF00;
+            font-size: 18px;
+            margin: 10px 0;
+            height: 20px; /* Reserva espaço para não pular o layout */
+        }
+
+        #startBtn {
+            background-color: #2222BB;
+            color: #FFFF00;
+            border: none;
+            padding: 12px 40px;
+            font-size: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        #startBtn:hover {
+            background-color: #3333FF;
+        }
+
+        .controls-hint {
+            color: #888;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        /* Oculta as imagens técnicas */
+        .assets {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PAC-MAN</h1>
+
+    <div class="stats">
+        Pontuação: <span id="score">0</span> &nbsp;&nbsp; Vidas: <span id="lives">3</span>
+    </div>
+
+    <div class="game-area">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <p id="message"></p>
+
+    <button id="startBtn">Iniciar / Reiniciar</button>
+    
+    <p class="controls-hint">Use as teclas ← ↑ → ↓ para mover o Pac-Man</p>
+
+    <div class="assets">
+        <img id="animations" src="assets/animations.gif" alt="">
+        <img id="ghosts" src="assets/ghost.png" alt="">
+    </div>
+
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>
