@@ -8,7 +8,7 @@
     <style>
         body {
             background-color: black;
-            color: #FFFF00; /* Amarelo Pac-Man */
+            color: #FFFF00;
             text-align: center;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -31,25 +31,21 @@
             font-weight: bold;
         }
 
-        /* Container para garantir que o canvas e o texto fiquem alinhados */
         .game-area {
             position: relative;
             display: inline-block;
         }
 
         canvas {
-            border: 2px solid #0000FF; /* Borda Azul conforme a imagem */
+            border: 2px solid #0000FF;
             background-color: black;
             display: block;
         }
-
-        /* A mensagem "Clique em Iniciar" agora é controlada pelo JS dentro do Canvas, 
-           mas este ID ajuda o JS a encontrá-lo se necessário */
         #message {
             color: #FFFF00;
             font-size: 18px;
             margin: 10px 0;
-            height: 20px; /* Reserva espaço para não pular o layout */
+            height: 20px; 
         }
 
         #startBtn {
@@ -74,8 +70,6 @@
             font-size: 14px;
             margin-top: 15px;
         }
-
-        /* Oculta as imagens técnicas */
         .assets {
             display: none;
         }
